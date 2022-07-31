@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 st.set_option('deprecation.showfileUploaderEncoding', False)
 # Load the pckled model
-pickle_in = open("/content/drive/My Drive/decision_modelmultivariable.pkl","rb")
+pickle_in = open("decision_modelmultivariable.pkl","rb")
 model=pickle.load(pickle_in)
 def predict_note_authentication(UserID, Gender,Age,EstimatedSalary):
   output= model.predict([[Age,EstimatedSalary,Gender]])
